@@ -14,10 +14,10 @@ variable "region" {
 default = "us-ashburn-1"  
 }
 
-variable "ssh_private_key_path" {
+variable "ssh_private_key" {
 }
 
-variable "ssh_public_key_path" {
+variable "ssh_public_key" {
 }
 
 variable "compartment_ocid" {
@@ -245,7 +245,7 @@ resource "oci_core_instance" "Webserver-AD1" {
   }
 
   metadata = {
-    ssh_authorized_keys = "${file(var.ssh_public_key_path)}"
+    ssh_authorized_keys = "${var.ssh_public_key}"
     user_data           = "base64encode(var.user-data)"
   }
 
