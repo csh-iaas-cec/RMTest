@@ -4,5 +4,5 @@ region="us-ashburn-1"
 private_key_path="/function/red_key.pem"
 
 compartment_ocid="ocid1.compartment.oc1..aaaaaaaak6luaqsi3cy77vvu5r5lybcxxs3ogsczvyjeg5tnql5ktxbyx7xa"
-ssh_public_key="(cat /function/ssh_cec_pub.pub)"
-ssh_private_key="(cat /function/ssh_cec_priv)"
+ssh_public_key="cat /function/ssh_cec_pub.pub"
+ssh_private_key="cat /function/ssh_cec_priv"
