@@ -1,8 +1,8 @@
 variable "tenancy_ocid" {
 }
 
-variable "user_ocid" {
-}
+#variable "user_ocid" {
+#}
 
 #variable "fingerprint" {
 #}
