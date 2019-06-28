@@ -28,6 +28,11 @@ type = "list"
   default = ["Dgrl:US-ASHBURN-AD-1","Dgrl:US-ASHBURN-AD-2","Dgrl:US-ASHBURN-AD-3"]
 }
 
+provider "oci" {
+region = "us-ashburn-1"
+}
+
+
 ### Network Variables #####
 
 variable "vcn_cidr_block" {
