@@ -25,7 +25,7 @@ variable "compartment_ocid" {
 
 variable "ad" {
 type = "list"
-  default = ["Dgrl:US-ASHBURN-AD-1","Dgrl:US-ASHBURN-AD-2","Dgrl:US-ASHBURN-AD-3"]
+  default = ["wCBC:US-ASHBURN-AD-1","wCBC:US-ASHBURN-AD-2","wCBC:US-ASHBURN-AD-3"]
 }
 
 provider "oci" {
