@@ -54,7 +54,7 @@ variable "subnet_cidr_w2" {
 ##### COMPUTE INSTANCE #######
 
 variable "instance_shape" {
-  default = "VM.Standard2.4"
+  default = "VM.Standard2.2"
 }
 
 variable "instance_image_ocid" {
