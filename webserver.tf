@@ -247,7 +247,7 @@ resource "oci_core_instance" "Webserver-AD1" {
 
   metadata = {
     ssh_authorized_keys = "${var.ssh_public_key}"
-    user_data           = "base64encode(var.user-data)"
+    user_data           = "${base64encode(file(var.user-data))}"
   }
 
   timeouts {
