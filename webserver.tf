@@ -18,6 +18,7 @@ variable "ssh_private_key" {
 }
 
 variable "ssh_public_key" {
+  default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIgte6em4UJaBk5F+IzQMpPMyVvYOpkPbZ6tAjqR7J+LzXEz4+kXM/RECP0DkerWJa0ah/A+4lNRrj+DGyMrdNzgIB/n2kVN1QI8Ttr2LYEWw9a6nExsacBoWCM1Q1XmYck8du0fN6/GbnrNqz3NwZIfpmNg7rtcydsNNKLjUU4Ar5tPO3nF6NEY7pjVwPB/XqUhAVg2LIdJJAXeFKUfGYEFmqt0Bdos/DU8oMMn0FI0J3Yzq+RM4Fglib0B33koBtojtYFmwI+37Tr4RNubJwqWpt+iANZGsInFA7IwgJYsyXpvdslf34CYOEIwAyb2JsFH1GbLJYoR7YbyZyXXQN kishore@oracle.com"
 }
 
 variable "compartment_ocid" {
