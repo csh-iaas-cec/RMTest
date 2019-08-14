@@ -91,9 +91,9 @@ yum install -y httpd
 systemctl enable  httpd.service
 systemctl start  httpd.service
 echo '<!DOCTYPE html><html><head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>.card {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); max-width: 300px; margin: auto; text-align: center; font-family: arial;}.title {  color: grey;  font-size: 18px;}button {  border: none;  outline: 0;  display: inline-block;  padding: 8px;  color: white;  background-color: #000;  text-align: center;  cursor: pointer;  width: 100%;  font-size: 18px;}a {  text-decoration: none;  font-size: 22px;  color: black;}button:hover, a:hover {  opacity: 0.7;}</style></head><body><h2 style="text-align:center">User Profile Card</h2><div class="card"><img src="https://drive.google.com/uc?id=1J9S95FtwefSF7hlscpsUVOYhv9Vr_AyZ&export=download" alt="Pic" style="width:100%"><h1>' >> /var/www/html/index.html
-echo ${var.fn} ${var.ln}>> /var/www/html/index.html
+echo $first $last >> /var/www/html/index.html
 echo '</h1> <p class="title">CUSTOMER</p>  <p>' >> /var/www/html/index.html
-echo ${var.email} >> /var/www/html/index.html
+echo $email >> /var/www/html/index.html
 echo '</p>  <div style="margin: 24px 0;"><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-twitter"></i></a>  <a href="#"><i class="fa fa-linkedin"></i></a>  <a href="#"><i class="fa fa-facebook"></i></a></div><p><button>Contact</button></p></div></body></html>
 firewall-offline-cmd --add-service=http
 systemctl enable  firewalld
@@ -259,6 +259,13 @@ resource "oci_core_instance" "Webserver-AD1" {
 
   timeouts {
     create = "60m"
+  }
+  provisioner "remote-exec" {
+  environment_vars = {
+    "first" = "${var.fn}"
+    "last" = "${var.ln}"
+    "email" = "${var.email}"
+    }
   }
 }
 
