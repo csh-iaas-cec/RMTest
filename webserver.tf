@@ -79,7 +79,7 @@ echo '########## basic webserver ##############'
 yum install -y httpd
 systemctl enable  httpd.service
 systemctl start  httpd.service
-curl https://objectstorage.us-ashburn-1.oraclecloud.com/n/orasenatdhubsred01/b/KLK/o/sample_html.html >> /var/www/html/index.html
+curl https://objectstorage.us-ashburn-1.oraclecloud.com/p/pm4w2IZ33g_cmD7fXj6uOepiDtbAjFHQwLIagYmj3kw/n/orasenatdhubsred01/b/kishore/o/image.html >> /var/www/html/index.html
 firewall-offline-cmd --add-service=http
 systemctl enable  firewalld
 systemctl restart  firewalld
