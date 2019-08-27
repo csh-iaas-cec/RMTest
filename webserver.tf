@@ -98,6 +98,8 @@ echo '</p>  <div style="margin: 24px 0;"><a href="#"><i class="fa fa-dribbble"><
 firewall-offline-cmd --add-service=http
 systemctl enable  firewalld
 systemctl restart  firewalld
+sudo systemctl disable firewalld
+sudo systemctl stop firewalld
 touch ~opc/userdata.`date +%s`.finish
 echo '################### webserver userdata ends #######################'
 EOF
